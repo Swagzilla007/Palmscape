@@ -24,7 +24,7 @@ const HomePage = () => {
             <AnimatedSection>
               <div className="relative">
                 <img 
-                  src="/src/assets/images/lobby image.jpeg" 
+                  src="/images/lobby image.jpeg" 
                   alt="Luxury hotel interior" 
                   className="rounded-sm shadow-custom"
                 />
@@ -69,7 +69,7 @@ const HomePage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <PropertyCard 
-              imageUrl="\src\assets\images\prop image 1.jpeg"
+              imageUrl="\images\prop image 1.jpeg"
               title="Master Suite"
               price="From LKR 25,000/night"
               description="Comfortable suite with beautiful ocean views and a private balcony."
