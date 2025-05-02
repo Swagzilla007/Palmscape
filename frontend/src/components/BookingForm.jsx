@@ -31,8 +31,8 @@ const BookingForm = () => {
       <h3 className="text-2xl font-serif mb-6">Check Availability</h3>
       <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          <div>
-            <label htmlFor="checkIn" className="block text-sm font-medium text-gray-700 mb-1">
+          <div className="form-group">
+            <label htmlFor="checkIn" className="form-label">
               Check-in Date
             </label>
             <input
@@ -42,11 +42,11 @@ const BookingForm = () => {
               required
               value={formData.checkIn}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
+              className="form-input"
             />
           </div>
-          <div>
-            <label htmlFor="checkOut" className="block text-sm font-medium text-gray-700 mb-1">
+          <div className="form-group">
+            <label htmlFor="checkOut" className="form-label">
               Check-out Date
             </label>
             <input
@@ -56,14 +56,14 @@ const BookingForm = () => {
               required
               value={formData.checkOut}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
+              className="form-input"
             />
           </div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          <div>
-            <label htmlFor="adults" className="block text-sm font-medium text-gray-700 mb-1">
+          <div className="form-group">
+            <label htmlFor="adults" className="form-label">
               Adults
             </label>
             <select
@@ -71,7 +71,7 @@ const BookingForm = () => {
               name="adults"
               value={formData.adults}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
+              className="form-select"
             >
               {[1, 2, 3, 4, 5, 6].map(num => (
                 <option key={num} value={num}>
@@ -80,8 +80,8 @@ const BookingForm = () => {
               ))}
             </select>
           </div>
-          <div>
-            <label htmlFor="children" className="block text-sm font-medium text-gray-700 mb-1">
+          <div className="form-group">
+            <label htmlFor="children" className="form-label">
               Children
             </label>
             <select
@@ -89,7 +89,7 @@ const BookingForm = () => {
               name="children"
               value={formData.children}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
+              className="form-select"
             >
               {[0, 1, 2, 3, 4].map(num => (
                 <option key={num} value={num}>
@@ -100,8 +100,8 @@ const BookingForm = () => {
           </div>
         </div>
         
-        <div className="mb-6">
-          <label htmlFor="accommodation" className="block text-sm font-medium text-gray-700 mb-1">
+        <div className="form-group">
+          <label htmlFor="accommodation" className="form-label">
             Accommodation Type
           </label>
           <select
@@ -109,12 +109,11 @@ const BookingForm = () => {
             name="accommodation"
             value={formData.accommodation}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="form-select"
           >
-            <option value="villa">Mater Suite</option>
+            <option value="villa">Master Suite</option>
             <option value="suite">Deluxe Room</option>
             <option value="cottage">Family Suite</option>
-            
           </select>
         </div>
         

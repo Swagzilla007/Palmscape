@@ -29,23 +29,25 @@ const testimonials = [
 const TestimonialSlider = () => {
   const [current, setCurrent] = useState(0);
   const [autoplay, setAutoplay] = useState(true);
-
+  
   const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % testimonials.length);
+    setCurrent(current === testimonials.length - 1 ? 0 : current + 1);
+  };
+  
+  const prevSlide = () => {
+    setCurrent(current === 0 ? testimonials.length - 1 : current - 1);
   };
 
   useEffect(() => {
-    let interval;
-    if (autoplay) {
-      interval = setInterval(nextSlide, 5000);
-    }
-    return () => {
-      if (interval) {
-        clearInterval(interval);
-      }
-    };
-  }, [autoplay, current]);
-
+    if (!autoplay) return;
+    
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 3000); 
+    
+    return () => clearInterval(interval);
+  }, [current, autoplay]);
+  
   const handleMouseEnter = () => setAutoplay(false);
   const handleMouseLeave = () => setAutoplay(true);
 
@@ -56,44 +58,63 @@ const TestimonialSlider = () => {
       onMouseLeave={handleMouseLeave}
     >
       <div className="container-custom">
-        <div className="relative max-w-4xl mx-auto">
+        <div className="flex justify-between items-center mb-12">
+          <h3 className="text-2xl md:text-3xl font-serif text-primary-950">What Our Guests Say</h3>
+          <div className="flex gap-2">
+            <button
+              onClick={prevSlide}
+              className="p-2 border border-primary-200 rounded-full hover:bg-primary-100 transition-colors"
+              aria-label="Previous testimonial"
+            >
+              <ChevronLeft size={20} className="text-primary-800" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="p-2 border border-primary-200 rounded-full hover:bg-primary-100 transition-colors"
+              aria-label="Next testimonial"
+            >
+              <ChevronRight size={20} className="text-primary-800" />
+            </button>
+          </div>
+        </div>
+        
+        <div className="relative h-[280px] md:h-[220px]">
           <AnimatePresence mode="wait">
             <motion.div
               key={current}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="text-center"
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -100 }}
+              transition={{ duration: 0.5 }}
+              className="absolute w-full"
             >
-              <div className="flex justify-center gap-1 mb-6">
-                {[...Array(testimonials[current].rating)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <blockquote className="text-xl md:text-2xl text-gray-700 mb-8">
-                "{testimonials[current].content}"
-              </blockquote>
-              <div>
-                <p className="font-serif text-xl text-primary-950">{testimonials[current].name}</p>
-                <p className="text-gray-600">{testimonials[current].role}</p>
+              <div className="bg-white p-8 rounded-sm shadow-custom">
+                <div className="flex mb-4">
+                  {Array.from({ length: testimonials[current].rating }).map((_, i) => (
+                    <Star key={i} size={18} className="text-yellow-500 fill-yellow-500" />
+                  ))}
+                </div>
+                <p className="text-gray-700 italic mb-6">"{testimonials[current].content}"</p>
+                <div>
+                  <p className="font-medium text-primary-900">{testimonials[current].name}</p>
+                  <p className="text-sm text-gray-500">{testimonials[current].role}</p>
+                </div>
               </div>
             </motion.div>
           </AnimatePresence>
-          
-          <button 
-            onClick={() => setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
-            className="absolute left-0 top-1/2 -translate-y-1/2 p-2 bg-white rounded-full shadow-md hover:bg-primary-50"
-          >
-            <ChevronLeft className="w-6 h-6 text-primary-800" />
-          </button>
-          
-          <button 
-            onClick={() => setCurrent((prev) => (prev + 1) % testimonials.length)}
-            className="absolute right-0 top-1/2 -translate-y-1/2 p-2 bg-white rounded-full shadow-md hover:bg-primary-50"
-          >
-            <ChevronRight className="w-6 h-6 text-primary-800" />
-          </button>
+        </div>
+        
+        <div className="flex justify-center mt-6">
+          {testimonials.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrent(index)}
+              className={`w-3 h-3 rounded-full mx-1 ${
+                current === index ? 'bg-primary-700' : 'bg-primary-200'
+              }`}
+              aria-label={`Go to testimonial ${index + 1}`}
+            />
+          ))}
         </div>
       </div>
     </div>
