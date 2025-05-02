@@ -30,4 +30,8 @@
   .btn-outline {
     @apply border-2 border-primary-800 text-primary-800 px-6 py-2 rounded-full hover:bg-primary-800 hover:text-white transition-colors duration-300;
   }
+
+  .btn {
+    @apply px-6 py-2 rounded-full transition-all duration-300 inline-block text-center;
+  }
 }

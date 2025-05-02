@@ -39,9 +39,9 @@ export default {
         sans: ['Raleway', 'sans-serif'],
       },
       backgroundImage: {
-        'hero-pattern': "url('https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1920')",
-        'about-pattern': "url('https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1920')",
-        'services-pattern': "url('https://images.pexels.com/photos/2507010/pexels-photo-2507010.jpeg?auto=compress&cs=tinysrgb&w=1920')",
+        'hero-pattern': "url('/src/assets/images/bg for home.webp')",
+        'about-pattern': "url('/src/assets/images/about.jpeg')",
+        'services-pattern': "url('/src/assets/images/prop image 3.webp')",
       },
     },
   },

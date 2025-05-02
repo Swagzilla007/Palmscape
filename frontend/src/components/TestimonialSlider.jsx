@@ -5,44 +5,54 @@ import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    role: "Business Executive",
-    content: "An absolutely magnificent experience! The villa exceeded all expectations, and the staff's attention to detail was impeccable.",
-    rating: 5
+    name: 'Emma Thompson',
+    role: 'Business Executive',
+    content: 'PalmScape Villa exceeded all my expectations. The attention to detail and personalized service made our anniversary weekend truly unforgettable. We will definitely be returning!',
+    rating: 5,
   },
   {
     id: 2,
-    name: "Michael Chen",
-    role: "Travel Enthusiast",
-    content: "The perfect blend of luxury and comfort. The ocean views from our villa were breathtaking, and the service was world-class.",
-    rating: 5
+    name: 'Gayathra Chanith',
+    role: 'Travel Blogger',
+    content: 'As someone who stays in luxury accommodations around the world, I can confidently say that PalmScape Villa offers one of the most exquisite experiences in Sri Lanka. The perfect blend of luxury and comfort.',
+    rating: 5,
   },
   {
     id: 3,
-    name: "Emma Thompson",
-    role: "Interior Designer",
-    content: "The attention to design details and the overall aesthetics of the property are remarkable. A truly inspiring space.",
-    rating: 5
-  }
+    name: 'Kavindi dananjana',
+    role: 'Wedding Planner',
+    content: 'We hosted our intimate wedding at PalmScape Villa and it was magical. The staff went above and beyond to ensure everything was perfect. Our guests are still talking about it!',
+    rating: 5,
+  },
 ];
 
 const TestimonialSlider = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [current, setCurrent] = useState(0);
+  const [autoplay, setAutoplay] = useState(true);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+    if (autoplay) {
+      const timer = setInterval(() => {
+        setCurrent((prev) => (prev + 1) % testimonials.length);
+      }, 5000);
+      return () => clearInterval(timer);
+    }
+  }, [autoplay]);
+
+  const handleMouseEnter = () => setAutoplay(false);
+  const handleMouseLeave = () => setAutoplay(true);
 
   return (
-    <section className="section-padding bg-primary-50">
+    <div 
+      className="relative overflow-hidden py-12"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className="container-custom">
         <div className="relative max-w-4xl mx-auto">
           <AnimatePresence mode="wait">
             <motion.div
-              key={currentIndex}
+              key={current}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -50,36 +60,36 @@ const TestimonialSlider = () => {
               className="text-center"
             >
               <div className="flex justify-center gap-1 mb-6">
-                {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
+                {[...Array(testimonials[current].rating)].map((_, i) => (
                   <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
                 ))}
               </div>
               <blockquote className="text-xl md:text-2xl text-gray-700 mb-8">
-                "{testimonials[currentIndex].content}"
+                "{testimonials[current].content}"
               </blockquote>
               <div>
-                <p className="font-serif text-xl text-primary-950">{testimonials[currentIndex].name}</p>
-                <p className="text-gray-600">{testimonials[currentIndex].role}</p>
+                <p className="font-serif text-xl text-primary-950">{testimonials[current].name}</p>
+                <p className="text-gray-600">{testimonials[current].role}</p>
               </div>
             </motion.div>
           </AnimatePresence>
           
           <button 
-            onClick={() => setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
+            onClick={() => setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
             className="absolute left-0 top-1/2 -translate-y-1/2 p-2 bg-white rounded-full shadow-md hover:bg-primary-50"
           >
             <ChevronLeft className="w-6 h-6 text-primary-800" />
           </button>
           
           <button 
-            onClick={() => setCurrentIndex((prev) => (prev + 1) % testimonials.length)}
+            onClick={() => setCurrent((prev) => (prev + 1) % testimonials.length)}
             className="absolute right-0 top-1/2 -translate-y-1/2 p-2 bg-white rounded-full shadow-md hover:bg-primary-50"
           >
             <ChevronRight className="w-6 h-6 text-primary-800" />
           </button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
