@@ -15,8 +15,8 @@ const Footer = () => {
               <span className="text-xl font-serif text-white">PalmScape</span>
             </div>
             <p className="text-primary-100 mb-4">
-              Experience luxury and tranquility in our exclusive beachfront villa, 
-              nestled in a breathtaking location in Sri Lanka.
+              Experience comfort and tranquility in our beachfront villa, 
+              nestled in the beautiful coastal town of Chilaw, Sri Lanka.
             </p>
             <div className="flex gap-4">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" 

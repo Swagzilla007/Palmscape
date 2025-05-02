@@ -9,7 +9,7 @@ const AboutPage = () => {
     <>
       <Hero
         title="About PalmScape Villa"
-        subtitle="Discover the story behind our commitment to exceptional luxury experiences."
+        subtitle="Discover the story behind our commitment to exceptional Sri Lankan hospitality."
         bgClass="bg-about-pattern"
         alignment="left"
         height="medium"
@@ -28,11 +28,11 @@ const AboutPage = () => {
               />
               <p className="text-gray-600 mb-6">
                 Established in 2023, PalmScape Villa emerged from a vision to create an extraordinary retreat that 
-                combines luxurious comfort with authentic Sri Lankan hospitality. Our beachfront villa stands as a 
+                combines comfort with authentic Sri Lankan hospitality. Our beachfront villa stands as a 
                 testament to elegant design and exceptional service.
               </p>
               <p className="text-gray-600">
-                Today, PalmScape Villa is recognized as a premier luxury accommodation in Chilaw, offering an 
+                Today, PalmScape Villa is recognized as a premier budget friendly accommodation in Chilaw, offering an 
                 unforgettable experience that blends modern luxury with local charm. Our location was carefully 
                 selected to provide our guests with stunning ocean views and easy access to local attractions.
               </p>

@@ -44,7 +44,7 @@ const ServicesPage = () => {
     <>
       <Hero
         title="Our Services & Accommodations"
-        subtitle="Experience luxury beachfront living with our premium services and comfortable suites."
+        subtitle="Experience comfortable beachfront living with our welcoming services and cozy suites."
         bgClass="bg-services-pattern"
         alignment="left"
         height="medium"
@@ -55,19 +55,19 @@ const ServicesPage = () => {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <SectionTitle 
-            title="Luxury Accommodations"
-            subtitle="Choose from our selection of beautifully appointed rooms and suites."
+            title="Beachfront Accommodations"
+            subtitle="Choose from our selection of comfortable rooms and suites."
             center={true}
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <PropertyCard 
               imageUrl="\src\assets\images\prop image 1.jpeg"
-              title="Master Suite"
-              price="From LKR 50,000/night"
-              description="Luxurious suite with ocean views, private balcony, and premium amenities."
+              title="Ocean View Suite"
+              price="From LKR 25,000/night"
+              description="Comfortable suite with beautiful ocean views and a private balcony."
               beds={1}
-              baths={1.5}
+              baths={2}
               guests={2}
               breakfast={true}
               delay={0.1}
@@ -75,9 +75,9 @@ const ServicesPage = () => {
             
             <PropertyCard 
               imageUrl="\src\assets\images\prop image 2.jpeg"
-              title="Deluxe Room"
-              price="From LKR 40,000/night"
-              description="Elegant room with garden views, king-size bed, and luxury bathroom."
+              title="Garden Room"
+              price="From LKR 14,000/night"
+              description="Elegant room with garden views, king-size bed, and cozy bathroom"
               beds={1}
               baths={1}
               guests={2}
@@ -87,9 +87,9 @@ const ServicesPage = () => {
             
             <PropertyCard 
               imageUrl="\src\assets\images\prop image 3.webp"
-              title="Family Suite"
-              price="From LKR 60,000/night"
-              description="Spacious suite with separate living area and two bedrooms. Perfect for families or small groups."
+              title="Family Room"
+              price="From LKR 35,000/night"
+              description="Spacious suite with separate living area, perfect for families."
               beds={2}
               baths={2}
               guests={4}
@@ -266,9 +266,9 @@ const ServicesPage = () => {
       <section className="py-20 bg-primary-900 text-white">
         <div className="container-custom text-center">
           <AnimatedSection>
-            <h2 className="text-white text-3xl md:text-4xl font-serif mb-6">Experience Luxury in Chilaw</h2>
+            <h2 className="text-white text-3xl md:text-4xl font-serif mb-6">Experience Comfort in Chilaw</h2>
             <p className="text-primary-100 text-lg max-w-2xl mx-auto mb-8">
-              Book your beachfront getaway at PalmScape Villa and discover the perfect blend of Sri Lankan hospitality and modern luxury.
+              Book your beachfront stay at PalmScape Villa and discover the perfect blend of Sri Lankan hospitality and modern comfort.
             </p>
             <Link to="/contact" className="btn-accent">
               Book Your Stay

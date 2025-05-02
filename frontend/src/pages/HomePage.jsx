@@ -12,7 +12,7 @@ const HomePage = () => {
   return (
     <>
       <Hero
-        title="Your Luxury Villa Escape"
+        title="Your Beachfront Villa Getaway"
         subtitle="Experience the perfect blend of comfort and elegance in our exclusive beachfront villa."
         bgClass="bg-hero-pattern"
         height="full"
@@ -63,7 +63,7 @@ const HomePage = () => {
         <div className="container-custom">
           <SectionTitle 
             title="Villa Accommodations"
-            subtitle="Explore our luxurious rooms and suites within the villa."
+            subtitle="Explore our cozy rooms and suites within the villa."
             center={true}
           />
           
@@ -71,10 +71,10 @@ const HomePage = () => {
             <PropertyCard 
               imageUrl="\src\assets\images\prop image 1.jpeg"
               title="Master Suite"
-              price="From LKR 50,000/night"
-              description="Luxurious master suite with ocean views, private balcony, and premium amenities."
+              price="From LKR 25,000/night"
+              description="Comfortable suite with beautiful ocean views and a private balcony."
               beds={1}
-              baths={1.5}
+              baths={2}
               guests={2}
               breakfast={true}
               delay={0.1}
@@ -83,8 +83,8 @@ const HomePage = () => {
             <PropertyCard 
               imageUrl="\src\assets\images\prop image 2.jpeg"
               title="Deluxe Room"
-              price="From LKR 40,000/night"
-              description="Elegant room with garden views, king-size bed, and luxury bathroom."
+              price="From LKR 14,000/night"
+              description="Elegant room with garden views, king-size bed, and cozy bathroom."
               beds={1}
               baths={1}
               guests={2}
@@ -95,7 +95,7 @@ const HomePage = () => {
             <PropertyCard 
               imageUrl="/src/assets/images/prop image 3.webp"
               title="Family Suite"
-              price="From LKR 30,000/night"
+              price="From LKR 35,000/night"
               description="Spacious suite with separate living area, perfect for families."
               beds={2}
               baths={2}
@@ -148,7 +148,7 @@ const HomePage = () => {
             <FeatureCard 
               icon={Clock}
               title="Private Transfers"
-              description="Enjoy seamless journeys with our luxurious private transfer services from the airport to your accommodation."
+              description="Enjoy seamless journeys with our private transfer services from the airport to your accommodation."
               delay={0.5}
             />
             
@@ -194,7 +194,7 @@ const HomePage = () => {
                   </div>
                   <div>
                     <p className="font-medium">Select Accommodation</p>
-                    <p className="text-sm text-gray-600">Choose your perfect villa</p>
+                    <p className="text-sm text-gray-600">Choose your perfect room type</p>
                   </div>
                 </div>
                 <div className="flex gap-3">

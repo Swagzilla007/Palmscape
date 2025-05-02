@@ -132,10 +132,122 @@ const ContactPage = () => {
                 </div>
               </div>
               
-              // ...rest of the social media links...
+              <div className="flex gap-4 mt-8">
+                <a 
+                  href="https://facebook.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-3 bg-primary-100 rounded-full text-primary-800 hover:bg-primary-200 transition-colors"
+                  aria-label="Facebook"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+                <a 
+                  href="https://instagram.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-3 bg-primary-100 rounded-full text-primary-800 hover:bg-primary-200 transition-colors"
+                  aria-label="Instagram"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a 
+                  href="https://twitter.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-3 bg-primary-100 rounded-full text-primary-800 hover:bg-primary-200 transition-colors"
+                  aria-label="Twitter"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                </a>
+              </div>
             </AnimatedSection>
             
-            // ...rest of the form section with class names updated to match our theme...
+            <AnimatedSection delay={0.3}>
+              <div className="bg-white p-8 rounded-sm shadow-custom">
+                <h3 className="text-2xl font-serif mb-6">Send Us a Message</h3>
+                
+                {formStatus === 'success' && (
+                  <div className="bg-green-50 border border-green-200 text-green-800 rounded-sm p-4 mb-6">
+                    <h4 className="font-medium mb-2">Thank You!</h4>
+                    <p>Your message has been sent successfully. We'll get back to you shortly.</p>
+                  </div>
+                )}
+                
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="form-group">
+                      <label htmlFor="name" className="form-label">Full Name *</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="form-input"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="email" className="form-label">Email *</label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="form-input"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="phone" className="form-label">Phone *</label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        required
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="form-input"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="subject" className="form-label">Subject *</label>
+                      <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        required
+                        value={formData.subject}
+                        onChange={handleChange}
+                        className="form-input"
+                      />
+                    </div>
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="message" className="form-label">Message *</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      value={formData.message}
+                      onChange={handleChange}
+                      className="form-input"
+                      rows="4"
+                    ></textarea>
+                  </div>
+                  
+                  <button
+                    type="submit"
+                    disabled={formStatus === 'submitting'}
+                    className="w-full btn-primary"
+                  >
+                    {formStatus === 'submitting' ? 'Sending...' : 'Send Message'}
+                  </button>
+                </form>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>

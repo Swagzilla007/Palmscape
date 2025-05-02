@@ -14,7 +14,7 @@ const testimonials = [
     id: 2,
     name: 'Gayathra Chanith',
     role: 'Travel Blogger',
-    content: 'As someone who stays in luxury accommodations around the world, I can confidently say that PalmScape Villa offers one of the most exquisite experiences in Sri Lanka. The perfect blend of luxury and comfort.',
+    content: 'As someone who stays in beach front accommodations around the world, I can confidently say that PalmScape Villa offers one of the most exquisite experiences in Sri Lanka. The perfect blend of luxury and comfort.',
     rating: 5,
   },
   {

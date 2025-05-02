@@ -42,6 +42,7 @@ export default {
         'hero-pattern': "url('/src/assets/images/bg for home.webp')",
         'about-pattern': "url('/src/assets/images/about.jpeg')",
         'services-pattern': "url('/src/assets/images/prop image 3.webp')",
+        'contact-pattern': "url('/src/assets/images/contact booking.jpg')",
       },
     },
   },
