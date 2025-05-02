@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .navbar-link {
+    @apply text-gray-700 hover:text-primary-800 transition-colors duration-300;
+  }
+  
+  .navbar-link-active {
+    @apply text-primary-800 font-medium;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-800 text-white px-6 py-2 rounded-full hover:bg-primary-700 transition-colors duration-300;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .shadow-custom {
+    @apply shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)];
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary-800 text-primary-800 px-6 py-2 rounded-full hover:bg-primary-800 hover:text-white transition-colors duration-300;
+  }
+}
