@@ -2,7 +2,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { icon } from 'leaflet';
 
-// Fix for default marker icon
+
 const customIcon = icon({
   iconUrl: '/marker-icon.png',
   iconSize: [25, 41],

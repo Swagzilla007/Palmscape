@@ -39,10 +39,12 @@
   
   .navbar-link {
     @apply relative text-gray-700 hover:text-primary-800 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary-800 after:transition-all after:duration-300 hover:after:w-full;
+    @apply font-medium transition-colors;
   }
   
   .navbar-link-active {
     @apply text-primary-800 after:w-full;
+    @apply text-primary-800;
   }
   
   .btn-primary {

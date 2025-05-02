@@ -36,25 +36,34 @@ const Navbar = () => {
     >
       <div className="container-custom flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <Home className="h-6 w-6 text-primary-800" />
-          <span className="text-xl font-serif font-bold text-primary-800">PalmScape</span>
+          <Home className={`h-6 w-6 ${isScrolled ? 'text-primary-800' : 'text-white'}`} />
+          <span className={`text-xl font-serif font-bold ${isScrolled ? 'text-primary-800' : 'text-white'}`}>
+            PalmScape
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
           <ul className="flex items-center gap-8">
             <li>
-              <NavLink to="/" className={({ isActive }) => `navbar-link ${isActive ? 'navbar-link-active' : ''}`}>
+              <NavLink 
+                to="/" 
+                className={({ isActive }) => 
+                  `navbar-link ${isActive ? 'navbar-link-active' : ''} ${
+                    isScrolled ? 'text-gray-700' : 'text-white'
+                  }`
+                }
+              >
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about" className={({ isActive }) => `navbar-link ${isActive ? 'navbar-link-active' : ''}`}>
+              <NavLink to="/about" className={({ isActive }) => `navbar-link ${isActive ? 'navbar-link-active' : ''} ${isScrolled ? 'text-gray-700' : 'text-white'}`}>
                 About Us
               </NavLink>
             </li>
             <li>
-              <NavLink to="/services" className={({ isActive }) => `navbar-link ${isActive ? 'navbar-link-active' : ''}`}>
+              <NavLink to="/services" className={({ isActive }) => `navbar-link ${isActive ? 'navbar-link-active' : ''} ${isScrolled ? 'text-gray-700' : 'text-white'}`}>
                 Services
               </NavLink>
             </li>
@@ -62,7 +71,7 @@ const Navbar = () => {
               <NavLink
                 to="/contact"
                 className={({ isActive }) =>
-                  `navbar-link ${isActive ? 'navbar-link-active' : ''}`
+                  `navbar-link ${isActive ? 'navbar-link-active' : ''} ${isScrolled ? 'text-gray-700' : 'text-white'}`
                 }
               >
                 Contact
@@ -73,7 +82,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="block md:hidden text-primary-800"
+          className={`block md:hidden ${isScrolled ? 'text-primary-800' : 'text-white'}`}
           onClick={toggleMenu}
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
         >
@@ -113,7 +122,28 @@ const Navbar = () => {
                     About Us
                   </NavLink>
                 </li>
-                {/* ...existing mobile nav items... */}
+                <li>
+                  <NavLink
+                    to="/services"
+                    className={({ isActive }) =>
+                      `block py-2 ${isActive ? 'text-primary-800 font-medium' : 'text-gray-700'}`
+                    }
+                    onClick={closeMenu}
+                  >
+                    Services
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/contact"
+                    className={({ isActive }) =>
+                      `block py-2 ${isActive ? 'text-primary-800 font-medium' : 'text-gray-700'}`
+                    }
+                    onClick={closeMenu}
+                  >
+                    Contact
+                  </NavLink>
+                </li>
               </ul>
             </nav>
           </motion.div>

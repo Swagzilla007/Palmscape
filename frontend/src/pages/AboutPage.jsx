@@ -40,7 +40,7 @@ const AboutPage = () => {
             
             <AnimatedSection delay={0.2} direction="left">
               <div className="grid grid-cols-2 gap-4">
-                {/* Update image paths to use local assets */}
+                
                 <img 
                   src="\src\assets\images\bg for home.webp" 
                   alt="Villa exterior" 
@@ -144,7 +144,7 @@ const AboutPage = () => {
         </div>
       </section>
       
-      {/* Team Section - Update with actual team members */}
+      
       <section className="section-padding bg-white">
         <div className="container-custom">
           <SectionTitle 
@@ -154,7 +154,7 @@ const AboutPage = () => {
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Update with actual team members and local image paths */}
+            
             <AnimatedSection delay={0.1}>
               <div className="text-center">
                 <div className="relative mb-5 mx-auto w-60 h-60 rounded-full overflow-hidden shadow-custom">
@@ -188,11 +188,11 @@ const AboutPage = () => {
                 <div className="relative mb-5 mx-auto w-60 h-60 rounded-full overflow-hidden shadow-custom">
                   <img 
                     src="https://images.pexels.com/photos/762080/pexels-photo-762080.jpeg?auto=compress&cs=tinysrgb&w=600"
-                    alt="Sarah Williams" 
+                    alt="Kumari Silva" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-medium">Sarah Williams</h3>
+                <h3 className="text-xl font-medium">Kumari Silva</h3>
                 <p className="text-primary-800">Guest Experience Manager</p>
               </div>
             </AnimatedSection>
@@ -202,50 +202,12 @@ const AboutPage = () => {
                 <div className="relative mb-5 mx-auto w-60 h-60 rounded-full overflow-hidden shadow-custom">
                   <img 
                     src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&w=600"
-                    alt="Michael Chen" 
+                    alt="Pradeep Bandara" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-medium">Michael Chen</h3>
+                <h3 className="text-xl font-medium">Pradeep Bandara</h3>
                 <p className="text-primary-800">Head of Customer Relations</p>
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-      
-      {/* Testimonials */}
-      <TestimonialSlider />
-      
-      {/* Stats Section - Update with relevant numbers */}
-      <section className="py-16 bg-primary-900 text-white">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <AnimatedSection>
-              <div className="text-center">
-                <div className="text-6xl font-serif mb-3">3</div>
-                <p className="text-primary-200">Luxury Suites</p>
-              </div>
-            </AnimatedSection>
-            
-            <AnimatedSection delay={0.1}>
-              <div className="text-center">
-                <div className="text-6xl font-serif mb-3">1k+</div>
-                <p className="text-primary-200">Happy Guests</p>
-              </div>
-            </AnimatedSection>
-            
-            <AnimatedSection delay={0.2}>
-              <div className="text-center">
-                <div className="text-6xl font-serif mb-3">4.9</div>
-                <p className="text-primary-200">Average Rating</p>
-              </div>
-            </AnimatedSection>
-            
-            <AnimatedSection delay={0.3}>
-              <div className="text-center">
-                <div className="text-6xl font-serif mb-3">#1</div>
-                <p className="text-primary-200">Booking.com Award 2023</p>
               </div>
             </AnimatedSection>
           </div>

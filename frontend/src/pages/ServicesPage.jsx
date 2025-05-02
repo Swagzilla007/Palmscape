@@ -256,7 +256,7 @@ const ServicesPage = () => {
                 title: "Do you arrange local tours?",
                 content: "Yes, we can arrange tours to nearby attractions including Munneswaram Temple, Chilaw Fish Market, and boat rides in the Chilaw Lagoon."
               }
-              // Add more FAQs...
+              
             ]} />
           </div>
         </div>
