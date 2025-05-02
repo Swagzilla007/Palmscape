@@ -140,34 +140,37 @@ const BookingForm = () => {
       <AnimatePresence>
         {showDialog && (
           <>
+            {/* Overlay */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 z-50"
+              className="fixed inset-0 bg-black/50 z-[60]"
               onClick={() => setShowDialog(false)}
             />
+            
+            {/* Dialog */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-8 rounded-sm shadow-lg z-50 max-w-md w-full"
+              className="fixed left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 w-[60%] sm:w-[90%] max-w-[220px] sm:max-w-sm mx-auto bg-white p-3 sm:p-6 md:p-8 rounded-sm shadow-lg z-[70]"
             >
               <button 
                 onClick={() => setShowDialog(false)}
-                className="absolute right-4 top-4 text-gray-400 hover:text-gray-600"
+                className="absolute right-2 top-2 sm:right-4 sm:top-4 text-gray-400 hover:text-gray-600 transition-colors"
               >
-                <X size={24} />
+                <X size={18} className="sm:w-6 sm:h-6" />
               </button>
               
               <div className="text-center">
-                <h3 className="text-2xl font-serif text-primary-900 mb-4">Thank You!</h3>
-                <p className="text-gray-600 mb-6">
-                  We've received your booking request. Our team will contact you shortly to confirm availability and provide further details.
+                <h3 className="text-lg sm:text-2xl font-serif text-primary-900 mb-2 sm:mb-4">Thank You!</h3>
+                <p className="text-xs sm:text-base text-gray-600 mb-3 sm:mb-6">
+                  We've received your request. We'll contact you shortly.
                 </p>
                 <button 
                   onClick={() => setShowDialog(false)}
-                  className="btn-primary"
+                  className="btn-primary w-full text-xs sm:text-base py-2 sm:py-3"
                 >
                   Close
                 </button>
