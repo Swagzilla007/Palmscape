@@ -52,12 +52,12 @@ const AboutPage = () => {
                   className="rounded-sm shadow-custom translate-y-8"
                 />
                 <img 
-                  src="\assets\images\room.avif" 
+                  src="\images\room.avif" 
                   alt="Villa interior" 
                   className="rounded-sm shadow-custom -translate-y-8"
                 />
                 <img 
-                  src="\assets\images\swimpool.webp" 
+                  src="\images\swimpool.webp" 
                   alt="Villa bedroom" 
                   className="rounded-sm shadow-custom"
                 />
