@@ -81,7 +81,7 @@ const HomePage = () => {
             />
             
             <PropertyCard 
-              imageUrl="\src\assets\images\prop image 2.jpeg"
+              imageUrl="\images\prop image 2.jpeg"
               title="Deluxe Room"
               price="From LKR 14,000/night"
               description="Elegant room with garden views, king-size bed, and cozy bathroom."
@@ -93,7 +93,7 @@ const HomePage = () => {
             />
             
             <PropertyCard 
-              imageUrl="/src/assets/images/prop image 3.webp"
+              imageUrl="/images/prop image 3.webp"
               title="Family Suite"
               price="From LKR 35,000/night"
               description="Spacious suite with separate living area, perfect for families."

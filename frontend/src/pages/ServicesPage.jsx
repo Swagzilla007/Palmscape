@@ -62,7 +62,7 @@ const ServicesPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <PropertyCard 
-              imageUrl="\src\assets\images\prop image 1.jpeg"
+              imageUrl="\images\prop image 1.jpeg"
               title="Ocean View Suite"
               price="From LKR 25,000/night"
               description="Comfortable suite with beautiful ocean views and a private balcony."
@@ -74,7 +74,7 @@ const ServicesPage = () => {
             />
             
             <PropertyCard 
-              imageUrl="\src\assets\images\prop image 2.jpeg"
+              imageUrl="\images\prop image 2.jpeg"
               title="Garden Room"
               price="From LKR 14,000/night"
               description="Elegant room with garden views, king-size bed, and cozy bathroom"
@@ -86,7 +86,7 @@ const ServicesPage = () => {
             />
             
             <PropertyCard 
-              imageUrl="\src\assets\images\prop image 3.webp"
+              imageUrl="\images\prop image 3.webp"
               title="Family Room"
               price="From LKR 35,000/night"
               description="Spacious suite with separate living area, perfect for families."

@@ -42,22 +42,22 @@ const AboutPage = () => {
               <div className="grid grid-cols-2 gap-4">
                 
                 <img 
-                  src="\src\assets\images\bg for home.webp" 
+                  src="\images\bg for home.webp" 
                   alt="Villa exterior" 
                   className="rounded-sm shadow-custom"
                 />
                 <img 
-                  src="\src\assets\images\prop image 3.webp" 
+                  src="\images\prop image 3.webp" 
                   alt="Villa pool" 
                   className="rounded-sm shadow-custom translate-y-8"
                 />
                 <img 
-                  src="\src\assets\images\room.avif" 
+                  src="\assets\images\room.avif" 
                   alt="Villa interior" 
                   className="rounded-sm shadow-custom -translate-y-8"
                 />
                 <img 
-                  src="\src\assets\images\swimpool.webp" 
+                  src="\assets\images\swimpool.webp" 
                   alt="Villa bedroom" 
                   className="rounded-sm shadow-custom"
                 />
@@ -159,7 +159,7 @@ const AboutPage = () => {
               <div className="text-center">
                 <div className="relative mb-5 mx-auto w-60 h-60 rounded-full overflow-hidden shadow-custom">
                   <img 
-                    src="\src\assets\images\Picsart_24-03-24_18-37-17-485.jpg"
+                    src="\images\Picsart_24-03-24_18-37-17-485.jpg"
                     alt="Gayathra Chanith" 
                     className="w-full h-full object-cover"
                   />
