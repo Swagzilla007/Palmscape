@@ -154,7 +154,7 @@ const BookingForm = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="fixed left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 w-[60%] sm:w-[90%] max-w-[220px] sm:max-w-sm mx-auto bg-white p-3 sm:p-6 md:p-8 rounded-sm shadow-lg z-[70]"
+              className="fixed left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 w-[60%] sm:w-[90%] max-w-[200px] sm:max-w-sm mx-auto bg-white p-3 sm:p-6 md:p-8 rounded-sm shadow-lg z-[70]"
             >
               <button 
                 onClick={() => setShowDialog(false)}
