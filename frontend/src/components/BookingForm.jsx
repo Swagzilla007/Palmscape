@@ -10,7 +10,7 @@ const BookingForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
+    
     console.log('Form submitted:', formData);
   };
 
@@ -18,7 +18,7 @@ const BookingForm = () => {
     <form onSubmit={handleSubmit} className="bg-white p-8 rounded-sm shadow-md">
       <div className="space-y-4">
         <div>
-          <label htmlFor="checkIn" className="block text-gray-700 mb-2">Check In</label>
+        <label htmlFor="checkIn" className="block text-gray-700 mb-2">Check In</label>
           <input
             type="date"
             id="checkIn"
@@ -34,7 +34,7 @@ const BookingForm = () => {
           <input
             type="date"
             id="checkOut"
-            value={formData.checkOut}
+        value={formData.checkOut}
             onChange={(e) => setFormData({ ...formData, checkOut: e.target.value })}
             className="w-full px-4 py-2 border border-gray-300 rounded-sm focus:outline-none focus:border-primary-500"
             required

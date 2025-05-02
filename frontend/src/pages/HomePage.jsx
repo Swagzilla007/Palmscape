@@ -24,7 +24,7 @@ const HomePage = () => {
             <AnimatedSection>
               <div className="relative">
                 <img 
-                  src="https://images.pexels.com/photos/53464/sheraton-palace-hotel-lobby-architecture-san-francisco-53464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                  src="/src/assets/images/lobby image.jpeg" 
                   alt="Luxury hotel interior" 
                   className="rounded-sm shadow-custom"
                 />
@@ -58,8 +58,7 @@ const HomePage = () => {
         </div>
       </section>
       
-      {/* Add other sections (Featured Properties, Services Preview, Booking Section, Testimonials) */}
-      {/* You can copy the remaining sections from your existing code */}
+     
     </>
   );
 };
