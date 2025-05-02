@@ -30,14 +30,21 @@ const TestimonialSlider = () => {
   const [current, setCurrent] = useState(0);
   const [autoplay, setAutoplay] = useState(true);
 
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % testimonials.length);
+  };
+
   useEffect(() => {
+    let interval;
     if (autoplay) {
-      const timer = setInterval(() => {
-        setCurrent((prev) => (prev + 1) % testimonials.length);
-      }, 5000);
-      return () => clearInterval(timer);
+      interval = setInterval(nextSlide, 5000);
     }
-  }, [autoplay]);
+    return () => {
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
+  }, [autoplay, current]);
 
   const handleMouseEnter = () => setAutoplay(false);
   const handleMouseLeave = () => setAutoplay(true);

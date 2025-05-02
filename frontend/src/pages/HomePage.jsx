@@ -116,29 +116,50 @@ const HomePage = () => {
             center={true}
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FeatureCard 
               icon={Utensils}
               title="Fine Dining"
-              description="Experience exquisite culinary creations prepared by our award-winning chefs."
+              description="Experience exquisite culinary creations prepared by our award-winning chefs using the finest local ingredients."
               delay={0.1}
             />
             
             <FeatureCard 
               icon={Sparkles}
               title="Wellness & Spa"
-              description="Rejuvenate your body and mind with our comprehensive spa treatments."
+              description="Rejuvenate your body and mind with our comprehensive range of spa treatments and wellness activities."
               delay={0.2}
             />
             
             <FeatureCard 
               icon={Phone}
-              title="24/7 Concierge"
-              description="Our dedicated team is available around the clock for your needs."
+              title="Concierge Services"
+              description="Our dedicated concierge team is available 24/7 to fulfill any request and create personalized experiences."
               delay={0.3}
             />
+            
+            <FeatureCard 
+              icon={Wifi}
+              title="High-Speed Connectivity"
+              description="Stay connected with complimentary high-speed Wi-Fi available throughout all our properties."
+              delay={0.4}
+            />
+            
+            <FeatureCard 
+              icon={Clock}
+              title="Private Transfers"
+              description="Enjoy seamless journeys with our luxurious private transfer services from the airport to your accommodation."
+              delay={0.5}
+            />
+            
+            <FeatureCard 
+              icon={Star}
+              title="Tailor-Made Experiences"
+              description="Let us create unique, memorable experiences customized to your preferences and interests."
+              delay={0.6}
+            />
           </div>
-        
+        </div>
       </section>
       
       {/* Booking Section */}
@@ -148,13 +169,56 @@ const HomePage = () => {
             <AnimatedSection>
               <SectionTitle 
                 title="Book Your Dream Getaway"
-                subtitle="Check availability and secure your reservation."
+                subtitle="Check availability and secure your reservation for a luxurious escape."
                 center={false}
               />
-              <p className="text-gray-600 mb-8">
-                Experience the perfect blend of luxury and comfort. Our booking process 
-                is designed to be simple and efficient.
+              <p className="text-gray-600 mb-6">
+                Our booking process is designed to be simple and efficient, allowing you to secure your dream accommodation with ease. 
               </p>
+              <p className="text-gray-600 mb-8">
+                Have special requirements or questions? Contact our dedicated reservations team who are ready to assist you with personalized service.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                <div className="flex gap-3">
+                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary-800 font-semibold">1</span>
+                  </div>
+                  <div>
+                    <p className="font-medium">Check Availability</p>
+                    <p className="text-sm text-gray-600">Find your preferred dates</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary-800 font-semibold">2</span>
+                  </div>
+                  <div>
+                    <p className="font-medium">Select Accommodation</p>
+                    <p className="text-sm text-gray-600">Choose your perfect villa</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary-800 font-semibold">3</span>
+                  </div>
+                  <div>
+                    <p className="font-medium">Confirm Details</p>
+                    <p className="text-sm text-gray-600">Review your booking</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary-800 font-semibold">4</span>
+                  </div>
+                  <div>
+                    <p className="font-medium">Secure Reservation</p>
+                    <p className="text-sm text-gray-600">Easy payment process</p>
+                  </div>
+                </div>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={0.3} direction="left">
               <BookingForm />
             </AnimatedSection>
           </div>
