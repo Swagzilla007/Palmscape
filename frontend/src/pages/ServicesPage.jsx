@@ -5,6 +5,7 @@ import SectionTitle from '../components/SectionTitle';
 import AnimatedSection from '../components/AnimatedSection';
 import PropertyCard from '../components/PropertyCard';
 import Accordion from '../components/Accordion';
+import ImageSlider from '../components/ImageSlider';
 
 const faqItems = [
   {
@@ -63,7 +64,12 @@ const ServicesPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <PropertyCard 
               imageUrl="\images\prop image 1.jpeg"
-              title="Ocean View Suite"
+              images={[
+                
+                "/images/master room balcony.jpg",
+                "/images/master room bathroom.jpg"
+              ]}
+              title="Mater Suite"
               price="From LKR 25,000/night"
               description="Comfortable suite with beautiful ocean views and a private balcony."
               beds={1}
@@ -75,7 +81,12 @@ const ServicesPage = () => {
             
             <PropertyCard 
               imageUrl="\images\prop image 2.jpeg"
-              title="Garden Room"
+              images={[
+                
+                "/images/deluxe room balcony.jpg",
+                "/images/deluxe room bathroom.jpg"
+              ]}
+              title="Deluxe Room"
               price="From LKR 14,000/night"
               description="Elegant room with garden views, king-size bed, and cozy bathroom"
               beds={1}
@@ -87,7 +98,12 @@ const ServicesPage = () => {
             
             <PropertyCard 
               imageUrl="\images\prop image 3.webp"
-              title="Family Room"
+              images={[
+                
+                "/images/family room bathroom.jpg",
+                "/images/family room bed.jpg"
+              ]}
+              title="Family Suite"
               price="From LKR 35,000/night"
               description="Spacious suite with separate living area, perfect for families."
               beds={2}

@@ -69,7 +69,11 @@ const HomePage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <PropertyCard 
-              imageUrl="\images\prop image 1.jpeg"
+              imageUrl="/images/prop image 1.jpeg"
+              images={[
+                "/images/master room balcony.jpg",
+                "/images/master room bathroom.jpg"
+              ]}
               title="Master Suite"
               price="From LKR 25,000/night"
               description="Comfortable suite with beautiful ocean views and a private balcony."
@@ -81,7 +85,11 @@ const HomePage = () => {
             />
             
             <PropertyCard 
-              imageUrl="\images\prop image 2.jpeg"
+              imageUrl="/images/prop image 2.jpeg"
+              images={[
+                "/images/deluxe room balcony.jpg",
+                "/images/deluxe room bathroom.jpg"
+              ]}
               title="Deluxe Room"
               price="From LKR 14,000/night"
               description="Elegant room with garden views, king-size bed, and cozy bathroom."
@@ -94,6 +102,10 @@ const HomePage = () => {
             
             <PropertyCard 
               imageUrl="/images/prop image 3.webp"
+              images={[
+                "/images/family room bathroom.jpg",
+                "/images/family room bed.jpg"
+              ]}
               title="Family Suite"
               price="From LKR 35,000/night"
               description="Spacious suite with separate living area, perfect for families."
