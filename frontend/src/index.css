@@ -119,4 +119,17 @@
   .form-group {
     @apply mb-5;
   }
+
+  /* Leaflet Map Styles */
+  .leaflet-container {
+    @apply z-10;
+  }
+
+  .leaflet-popup-content-wrapper {
+    @apply rounded-sm;
+  }
+
+  .leaflet-popup-content {
+    @apply m-0;
+  }
 }
