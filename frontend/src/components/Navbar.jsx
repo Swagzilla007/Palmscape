@@ -53,6 +53,11 @@ const Navbar = () => {
                 About Us
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/services" className={({ isActive }) => `navbar-link ${isActive ? 'navbar-link-active' : ''}`}>
+                Services
+              </NavLink>
+            </li>
             {/* ...existing nav items... */}
           </ul>
         </nav>
